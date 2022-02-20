@@ -3,6 +3,12 @@ session_start();
 
 // db configs
 try {
+   $DB_DRIVER="mysql";
+$DB_HOST="intdbi.clz1pslcbwsz.ap-south-1.rds.amazonaws.com";
+ $DB_DATABASE="test_todo";
+$DB_USERNAME="admin"; 
+$DB_PASSWORD="uQy07PSLarDuKRSAKtjl";
+
   $db = new PDO('mysql:host=intdbi.clz1pslcbwsz.ap-south-1.rds.amazonaws.com;dbname=test_todo', 'admin', 'uQy07PSLarDuKRSAKtjl');
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
